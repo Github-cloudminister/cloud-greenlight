@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14-alpine3.20
+    container_name: postgres
+    restart: unless-stopped
+    volumes:
+      - ./data/postgres/14/database_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=3288ae3d6a095b59de537f9f7e1d2a4de4fb043a45165a13
+
+  redis:
+    image: redis:6.2-alpine3.20
+    container_name: redis
+    restart: unless-stopped
+    volumes:
+      - ./data/redis/database_data:/data
+
+  greenlight-v3:
+    entrypoint: [bin/start]
+    image: bigbluebutton/greenlight:v3
+    container_name: greenlight-v3
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 127.0.0.1:5050:3000
+    logging:
+      driver: journald
+    volumes:
+      - /root/greenlight/storage:/usr/src/app/storage
+      - /root/greenlight/app/assets/locales/en.json:/usr/src/app/app/assets/locales/en.json
+      - /root/greenlight/app/javascript/components/home/HomePage.jsx:/usr/src/app/app/javascript/components/home/HomePage.jsx
+      - /root/greenlight/config/locales/en.yml:/usr/src/app/config/locales/en.yml  
+    depends_on:
+      - postgres
+      - redis

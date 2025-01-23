@@ -1,0 +1,83 @@
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+#
+# Copyright (c) 2022 BigBlueButton Inc. and by respective authors (see below).
+#
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# Greenlight is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License along
+# with Greenlight; if not, see <http://www.gnu.org/licenses/>.
+
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+ca:
+  opengraph:
+    description: "Aprèn utilitzant BigBlueButton, la solució de conferències web de codi obert de confiança que permet una col·laboració virtual sense interrupcions i experiències d'aprenentatge en línia."
+  meeting:
+    moderator_message: "Per convidar algú a la reunió, envia'ls aquest enllaç:"
+    access_code: "Codi d'accés: %{code}"
+  email:
+    activation:
+      account_activation: Activació del Compte
+      welcome_to_bbb: Benvingut a BigBlueButton!
+      get_started: "Per començar, si us plau activa el teu compte fent clic al botó de sota."
+      activate_account: Activa el Compte
+      link_expires: L'enllaç caducarà en 24 hores.
+      if_link_expires: "Si l'enllaç caduca, si us plau inicia sessió i sol·licita un nou correu electrònic d'activació."
+    invitation:
+      invitation_to_join: Invitació a BigBlueButton
+      you_have_been_invited: "Has estat convidat a crear un compte en BigBlueButton per %{name}."
+      get_started: "Per inscriure't, si us plau fes clic al botó de sota i segueix els passos."
+      valid_invitation: La invitació és vàlida durant 24 hores.
+      sign_up: Registre
+    new_user_signup:
+      new_user: Nova Alta d'Usuari en BigBlueButton
+      new_user_description: Un nou usuari s'ha registrat per utilitzar BigBlueButton.
+      name: "Nom: %{name}"
+      email: "Correu electrònic: %{email}"
+      admin_panel: "Tauler d'Administrador"
+      take_action: "Per veure el nou usuari o per prendre les accions necessàries, visita el Tauler d'Administrador"
+    reset:
+      password_reset: Restableix la Contrasenya
+      password_reset_requested: "S'ha sol·licitat un restabliment de contrasenya per %{email}."
+      password_reset_confirmation: "Per restablir la teva contrasenya, si us plau fes clic al botó de sota."
+      reset_password: Restableix la Contrasenya
+      link_expires: L'enllaç caducarà en 1 hora.
+      ignore_request: "Si no has sol·licitat canviar la teva contrasenya, si us plau ignora aquest correu electrònic."
+  room:
+    new_room_name: "Sala de %{username}"
